@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS5P2"/>
+        <attribute name="authors" value="George"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-21 10:55:59 AM"/>
+        <attribute name="created" value="R2VvcmdlO1RVRkY7MjAyNC0wOS0yMDswNjoxMDoxMCBQTTsyMTgx"/>
+        <attribute name="edited" value="R2VvcmdlO1RVRkY7MjAyNC0wOS0yMTsxMDo1NTo1OSBBTTszOzIyOTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Tip" type="Real" array="False" size=""/>
+            <declare name="MealCost" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <output expression="(&quot;Enter the cost of your meal:$ &quot;)" newline="True"/>
+            <input variable="MealCost"/>
+            <if expression="MealCost&gt;25">
+                <then>
+                    <assign variable="Tip" expression=".20 * MealCost"/>
+                </then>
+                <else>
+                    <assign variable="Tip" expression="3.00"/>
+                </else>
+            </if>
+            <assign variable="Total" expression="Mealcost + Tip"/>
+            <output expression="(&quot;The cost of your meal is:$ &quot;) &amp;MealCost" newline="True"/>
+            <output expression="(&quot;Your Tip is:$ &quot;) &amp;Tip" newline="True"/>
+            <output expression="(&quot;Your total amount is:$ &quot;) &amp;Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

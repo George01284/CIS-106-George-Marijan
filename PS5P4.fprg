@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS5P4"/>
+        <attribute name="authors" value="George"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-20 10:43:46 PM"/>
+        <attribute name="created" value="R2VvcmdlO1RVRkY7MjAyNC0wOS0yMDsxMDowNDo0NyBQTTsyMTg5"/>
+        <attribute name="edited" value="R2VvcmdlO1RVRkY7MjAyNC0wOS0yMDsxMDo0Mzo0NiBQTTsxOzIyOTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Cost" type="Real" array="False" size=""/>
+            <declare name="Warrantyprice1" type="Real" array="False" size=""/>
+            <declare name="Warrantyprice2" type="Real" array="False" size=""/>
+            <declare name="WarrantyCost1" type="Real" array="False" size=""/>
+            <declare name="ApplianceCost" type="Real" array="False" size=""/>
+            <declare name="WarrantyCost2" type="Real" array="False" size=""/>
+            <declare name="TotalCost" type="Real" array="False" size=""/>
+            <declare name="Warranty1" type="Real" array="False" size=""/>
+            <assign variable="Warranty1" expression="0.10"/>
+            <declare name="Warranty2" type="Real" array="False" size=""/>
+            <assign variable="Warranty2" expression="0.5"/>
+            <declare name="Name" type="String" array="False" size=""/>
+            <output expression="(&quot;Enter your appliance name&quot;)" newline="True"/>
+            <input variable="Name"/>
+            <input variable="ApplianceCost"/>
+            <assign variable="WarrantyCost1" expression="ApplianceCost*Warranty1+ApplianceCost"/>
+            <assign variable="WarrantyCost2" expression="ApplianceCost*Warranty2+ApplianceCost"/>
+            <if expression="Appliancecost&lt;=1000">
+                <then>
+                    <assign variable="Cost" expression="ApplianceCost"/>
+                    <assign variable="WarrantyPrice2" expression="ApplianceCost*Warranty2"/>
+                    <assign variable="WarrantyCost2" expression="ApplianceCost*Warranty2+ApplianceCost"/>
+                    <output expression="(&quot;ApplianceName: &quot;) &amp;Name" newline="True"/>
+                    <output expression="(&quot;The cost of your appliance is:$ &quot;) &amp;Cost" newline="True"/>
+                    <output expression="(&quot;The cost of your warranty is:$ &quot;) &amp;Warrantyprice2" newline="True"/>
+                    <output expression="(&quot;Your TotalCost is :$ &quot;) &amp;WarrantyCost2" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="Cost" expression="ApplianceCost"/>
+                    <assign variable="Warrantyprice1" expression="Appliancecost*Warranty1"/>
+                    <assign variable="WarrantyCost1" expression="ApplianceCost*Warranty1+ApplianceCost"/>
+                    <output expression="(&quot;ApplianceName: &quot;) &amp;Name" newline="True"/>
+                    <output expression="(&quot;The cost of your appliance is:$ &quot;) &amp;Cost" newline="True"/>
+                    <output expression="(&quot;The cost of your warranty is: &quot;) &amp;Warrantyprice1" newline="True"/>
+                    <output expression="(&quot;Your TotalCost is:$ &quot;) &amp;WarrantyCost1" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

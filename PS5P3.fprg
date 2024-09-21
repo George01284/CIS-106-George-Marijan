@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS5P3"/>
+        <attribute name="authors" value="George"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-20 09:53:50 PM"/>
+        <attribute name="created" value="R2VvcmdlO1RVRkY7MjAyNC0wOS0yMDswOToyMjowNCBQTTsyMTkw"/>
+        <attribute name="edited" value="R2VvcmdlO1RVRkY7MjAyNC0wOS0yMDswOToyNDowOCBQTTsxO0dlb3JnZTtUVUZGOzIwMjQtMDktMjA7MDU6MTY6MDYgUE07NDU1NA=="/>
+        <attribute name="edited" value="R2VvcmdlO1RVRkY7MjAyNC0wOS0yMDswOTo1Mzo1MCBQTTsxOzIzMDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Costperbook" type="Real" array="False" size=""/>
+            <declare name="Numberofbooks" type="Real" array="False" size=""/>
+            <declare name="OrderTotal" type="Real" array="False" size=""/>
+            <declare name="Shippingfee" type="Real" array="False" size=""/>
+            <assign variable="ShippingFee" expression="25"/>
+            <declare name="TotalCost" type="Real" array="False" size=""/>
+            <output expression="(&quot;Enter the number of books you are ordering&quot;)" newline="True"/>
+            <input variable="Numberofbooks"/>
+            <output expression="(&quot;Enter the cost of each book&quot;)" newline="True"/>
+            <input variable="Costperbook"/>
+            <assign variable="TotalCost" expression="Numberofbooks * Costperbook"/>
+            <if expression="TOtalCost&lt;=50">
+                <then>
+                    <assign variable="ShippingFee" expression="25"/>
+                    <assign variable="OrderTotal" expression="TotalCost + ShippingFee"/>
+                    <output expression="(&quot;Your OrderTotal is:$ &quot;) &amp;OrderTotal" newline="True"/>
+                    <output expression="(&quot;Your Shipping Charge is:$ &quot;) &amp;ShippingFee" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="ShippingFee" expression="0"/>
+                    <assign variable="OrderTotal" expression="TotalCost + ShippingFee"/>
+                    <output expression="(&quot;Your OrderTotal is:$ &quot;) &amp;OrderTotal" newline="True"/>
+                    <output expression="(&quot;Your Shipping Charge is:$ &quot;) &amp;ShippingFee" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS5P1"/>
+        <attribute name="authors" value="George"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-19 11:25:24 PM"/>
+        <attribute name="created" value="R2VvcmdlO1RVRkY7MjAyNC0wOS0xOTsxMDoxNToxMiBQTTsyMTkx"/>
+        <attribute name="edited" value="R2VvcmdlO1RVRkY7MjAyNC0wOS0xOTsxMToyNToyNCBQTTsxOzIzMDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Quantity" type="Real" array="False" size=""/>
+            <input variable="Quantity"/>
+            <declare name="Unitprice" type="Real" array="False" size=""/>
+            <declare name="Thousand" type="Real" array="False" size=""/>
+            <assign variable="Thousand" expression="1000 * 1"/>
+            <if expression="Quantity&gt;=thousand">
+                <then>
+                    <output expression="(&quot;Unitprice=3.00&quot;)" newline="True"/>
+                    <assign variable="Unitprice" expression="3.00"/>
+                </then>
+                <else>
+                    <output expression="(&quot;Unitprice=5.00&quot;)" newline="True"/>
+                    <assign variable="Unitprice" expression="5.00"/>
+                </else>
+            </if>
+            <declare name="Extprice" type="Real" array="False" size=""/>
+            <assign variable="Extprice" expression="Quantity * Unitprice"/>
+            <declare name="Tax" type="Real" array="False" size=""/>
+            <assign variable="Tax" expression="0.07 * Extprice"/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <assign variable="Total" expression="Extprice + Tax"/>
+            <output expression="(&quot;Your Quantity is: &quot;) &amp;Quantity" newline="True"/>
+            <output expression="(&quot;Your Unitprice is:$ &quot;) &amp;Unitprice" newline="True"/>
+            <output expression="(&quot;Your ExtPrice is:$ &quot;) &amp;Extprice" newline="True"/>
+            <output expression="(&quot;Your Tax is:$ &quot;) &amp;Tax" newline="True"/>
+            <output expression="(&quot;Your Total is:$ &quot;) &amp;Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
