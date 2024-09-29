@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS6P1"/>
+        <attribute name="authors" value="George"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-27 06:01:38 PM"/>
+        <attribute name="created" value="R2VvcmdlO1RVRkY7MjAyNC0wOS0yNzswNToyOToxOCBQTTsyMjA1"/>
+        <attribute name="edited" value="R2VvcmdlO1RVRkY7MjAyNC0wOS0yNzswNjowMTozOCBQTTsxOzIzMDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Quantity" type="Real" array="False" size=""/>
+            <declare name="ExtendedPrice" type="Real" array="False" size=""/>
+            <declare name="Price" type="Real" array="False" size=""/>
+            <declare name="TaxAmount" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter your quantity of widgets&quot;" newline="True"/>
+            <input variable="Quantity"/>
+            <if expression="Quantity &gt; 10000">
+                <then>
+                    <assign variable="Price" expression="10"/>
+                </then>
+                <else>
+                    <if expression="Quantity &gt; 5000">
+                        <then>
+                            <assign variable="Price" expression="20"/>
+                        </then>
+                        <else>
+                            <if expression="Quantity &lt; 5000">
+                                <then>
+                                    <assign variable="Price" expression="30"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="ExtendedPrice" expression="Quantity * Price"/>
+            <assign variable="TaxAmount" expression="ExtendedPrice * 0.07"/>
+            <assign variable="Total" expression="ExtendedPrice + TaxAmount"/>
+            <output expression="&quot;Your Extended Price is: $ &quot; &amp;ExtendedPrice" newline="True"/>
+            <output expression="&quot;Your Tax Amount is:$ &quot; &amp;TaxAmount" newline="True"/>
+            <output expression="&quot;Your total is:$ &quot; &amp;Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
