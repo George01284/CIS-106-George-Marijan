@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS7P2"/>
+        <attribute name="authors" value="George"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-05 11:19:02 PM"/>
+        <attribute name="created" value="R2VvcmdlO1RVRkY7MjAyNC0xMC0wNTsxMDozMzo0MSBQTTsyMTgw"/>
+        <attribute name="edited" value="R2VvcmdlO1RVRkY7MjAyNC0xMC0wNTsxMDozNToyMSBQTTsxO0dlb3JnZTtUVUZGOzIwMjQtMTAtMDU7MDk6NTA6NTUgUE07NDUzOQ=="/>
+        <attribute name="edited" value="R2VvcmdlO1RVRkY7MjAyNC0xMC0wNTsxMToxOTowMiBQTTsxOzIyOTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="StartValue" type="Real" array="False" size=""/>
+            <declare name="StopValue" type="Real" array="False" size=""/>
+            <declare name="IncrValue" type="Real" array="False" size=""/>
+            <input variable="StartValue"/>
+            <input variable="StopValue"/>
+            <input variable="IncrValue"/>
+            <while expression="StartValue &lt;= StopValue">
+                <assign variable="StartValue" expression="StartValue + IncrValue"/>
+                <output expression="StartValue" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
