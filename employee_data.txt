@@ -1,0 +1,4 @@
+Stevenson, 50000
+Smith, 120000
+Johnson, 75000
+Conrad, 40000
