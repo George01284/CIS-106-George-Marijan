@@ -2,7 +2,7 @@ last_Names = ["Smith", "Jones", "Johnson", "Kevin", "Ricardo", "William", "Jorda
 Scores = [40, 45, 50, 55, 60, 65, 70, 75, 80, 85]
 with open('data.txt', 'w') as file:
     for i in range(len(last_Names)):
-        file.write(last_Names[i]) + ',' + str(Scores[i]) + '\n'
+        file.write(last_Names[i]) + ',' + str(Scores[i]) + '\n')
 read_names = []
 read_scores = []
 with open('data.txt', 'r') as file:
